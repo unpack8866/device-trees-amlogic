@@ -194,22 +194,22 @@
 			dev_name = "codec_mm";
 			status = "okay";
 	};
-	ethmac: ethernet@0xc9410000{
-                compatible = "amlogic, gxbb-rgmii-dwmac";
-                reg = <0x0 0xc9410000 0x0 0x10000
-                0x0 0xc8834540 0x0 0x8>;
-                interrupts = <0 8 4>;
-                phy-mode= "rgmii";
-                pinctrl-names = "eth_pins";
-                pinctrl-0 = <&eth_pins>;
-                rst_pin-gpios = <&gpio GPIOZ_14 0>;
-                mc_val = <0x1621>;
-                resets = <&clock GCLK_IDX_ETHERNET>;
-                reset-names = "ethpower";
-                interrupt-names = "macirq";
-                clocks = <&clock CLK_81>;
-                clock-names = "ethclk81";
-        };
+	// ethmac: ethernet@0xc9410000{
+    //             compatible = "amlogic, gxbb-rgmii-dwmac";
+    //             reg = <0x0 0xc9410000 0x0 0x10000
+    //             0x0 0xc8834540 0x0 0x8>;
+    //             interrupts = <0 8 4>;
+    //             phy-mode= "rgmii";
+    //             pinctrl-names = "eth_pins";
+    //             pinctrl-0 = <&eth_pins>;
+    //             rst_pin-gpios = <&gpio GPIOZ_14 0>;
+    //             mc_val = <0x1621>;
+    //             resets = <&clock GCLK_IDX_ETHERNET>;
+    //             reset-names = "ethpower";
+    //             interrupt-names = "macirq";
+    //             clocks = <&clock CLK_81>;
+    //             clock-names = "ethclk81";
+    //     };
 
 	pwm {
 		compatible = "amlogic, meson-pwm";
@@ -984,36 +984,36 @@
 	};
 	/* END OF AUDIO board specific */
 
-	gpio_keypad{
-	    compatible = "amlogic, gpio_keypad";
-		status = "okay";
-		scan_period = <20>;
-		key_num = <1>;
-	    key_name = "power";
-		key_code = <116>;
-		key_pin = <&gpio_ao  GPIOAO_3  GPIO_ACTIVE_HIGH>;  /*"GPIOAO_3";*/
-	    irq_keyup = <6>;
-	    irq_keydown = <7>;
-	};
+	// gpio_keypad{
+	//     compatible = "amlogic, gpio_keypad";
+	// 	status = "okay";
+	// 	scan_period = <20>;
+	// 	key_num = <1>;
+	//     key_name = "power";
+	// 	key_code = <116>;
+	// 	key_pin = <&gpio_ao  GPIOAO_3  GPIO_ACTIVE_HIGH>;  /*"GPIOAO_3";*/
+	//     irq_keyup = <6>;
+	//     irq_keydown = <7>;
+	// };
 
-	adc_keypad{
-		compatible = "amlogic, adc_keypad";
-		status = "okay";
-		key_name = "menu", "vol-","vol+", "esc", "home";
-		key_num = <5>;
-		key_code = <139 114 115 1 102>;
-		key_chan = <0 0 0 0 0>;
-		key_val = <0 143 271 393 510>; //voltage=0/252/478/692/824mV, val=voltage/1800mV*1023
-		key_tolerance = <40 40 40 40 40>;
-	};
+	// adc_keypad{
+	// 	compatible = "amlogic, adc_keypad";
+	// 	status = "okay";
+	// 	key_name = "menu", "vol-","vol+", "esc", "home";
+	// 	key_num = <5>;
+	// 	key_code = <139 114 115 1 102>;
+	// 	key_chan = <0 0 0 0 0>;
+	// 	key_val = <0 143 271 393 510>; //voltage=0/252/478/692/824mV, val=voltage/1800mV*1023
+	// 	key_tolerance = <40 40 40 40 40>;
+	// };
 
-	sysled {
-		compatible = "amlogic, sysled";
-		dev_name = "sysled";
-		status = "okay";
-		led_gpio = <&gpio_ao  GPIOAO_13  GPIO_ACTIVE_HIGH>;
-		led_active_low = <1>;
-	};
+	// sysled {
+	// 	compatible = "amlogic, sysled";
+	// 	dev_name = "sysled";
+	// 	status = "okay";
+	// 	led_gpio = <&gpio_ao  GPIOAO_13  GPIO_ACTIVE_HIGH>;
+	// 	led_active_low = <1>;
+	// };
 	aml_sensor0: aml-sensor@0 {
 		compatible = "amlogic, aml-thermal";
 		device_name = "thermal";
