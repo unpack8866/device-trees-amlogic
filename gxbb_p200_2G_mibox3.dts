@@ -14,9 +14,9 @@
 #include <dt-bindings/pwm/meson.h>
 #include "mesongxbb.dtsi"
 / {
-	le-dt-id = "gxbb_p200_1G_mibox3";
+	le-dt-id = "gxbb_p200_2G_mibox3";
 	model = "Amlogic";
-	amlogic-dt-id = "gxb_p200_1g";
+	amlogic-dt-id = "gxb_p200_2g";
 	compatible = "amlogic, Gxbb";
 	interrupt-parent = <&gic>;
 	#address-cells = <2>;
@@ -34,7 +34,7 @@
 
 	memory@00000000 {
 		device_type = "memory";
-		linux,usable-memory = <0x0 0x1000000 0x0 0x3f000000>;
+		linux,usable-memory = <0x0 0x1000000 0x0 0x7f000000>;
 	};
 
 	reserved-memory {
